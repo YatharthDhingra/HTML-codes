@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment form</title>
+</head>
+<body>
+    <form action="">
+        <h1>Payment Form</h1>
+        <br>
+        <h2>User details</h2>
+        <!--required means the information is necessary
+        disabled means it is not necessary-->
+        <p><b>Name: </b> <input type="text" name="Name" required></p>
+        <p>
+            <!--fieldset --- > box
+            legend -- > title of box -->
+            <fieldset>
+                <legend><b>Gender: </b></legend>
+                <!--name of radio should be same otherwise both options can be selected -->
+          <input type="radio" name="gender"required> Male
+            <input type="radio" name="gender"required> Female
+        </fieldset>
+        </p>
+        <p><b>Address: <textarea name="address" id="address" cols="30" rows="4" required></textarea></b></p>
+        <!--Styling will be done in CSS-->
+        <p><b>Email: <input type="email " disabled></b>
+        (optional)</p>
+        <!--Tag for input of email and telephone number-->
+        <p><b>Phone number: </b><input type="tel" name="number" required></p>
+        <!--Tag for input of a normal number-->
+        <p><b>Pincode: <input type="number" name="Pincode" required></b></p>
+        <hr>
+        <h2>Card Details</h2>
+        <p><b>Card Type:
+            <select name="card" id="card" required>
+                <!--First option's value should be empty-->
+                <option value="">Select a Card Type</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="Rupay">Rupay</option>
+            </select>
+        </b></p>
+        <p><b>
+            Card Number: <input type="tel" name="Card number" required>
+        </b></p>
+        <p><b>
+            <!--Tag of input of date-->
+            Expiration Date: <input type="date" name="date" id="date"required>
+        </b></p>
+        <p><b>
+            CVV: <input type="password" name="cvv" id="cvv"required>
+        </b></p>
+        <p><b>
+            <!--here the submit button shows with the name of value-->
+            <input type="submit" value="Pay Now">
+        </b></p>
+    </form>
+</body>
+</html>
+<!--The method of form is 'get' , the information entered in the form goes through the URL to the server-->
+
+<!--file:///C:/Users/Yatharth%20Dhingra/Desktop/Web%20Dev/HTML/payment_form.html?Name=Yatharth+Dhingra&gender=on&address=Vikas+Path+%2C+Alwar&number=9828274474&Pincode=301001&card=Visa&Card+number=1001-2002-3003-4004&date=2022-08-17&cvv=221-->
+
